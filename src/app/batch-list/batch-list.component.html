@@ -1,0 +1,7 @@
+<p>batch-list works!</p>
+<h2>Batch List</h2>
+<ul>
+  <li *ngFor="let batch of batch">
+    <a [routerLink]="['/batches', batch.id]">{{ batch.name }}</a>
+  </li>
+</ul>

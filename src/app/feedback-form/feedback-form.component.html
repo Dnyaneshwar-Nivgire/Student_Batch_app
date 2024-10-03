@@ -1,0 +1,15 @@
+<p>feedback-form works!</p>
+<h2>Student Feedback Form</h2>
+
+<form #feedbackForm="ngForm" (ngSubmit)="onSubmit(feedbackForm.value)">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" ngModel required />
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" ngModel required />
+
+  <label for="feedback">Feedback:</label>
+  <textarea id="feedback" name="feedback" ngModel required></textarea>
+
+  <button type="submit" [disabled]="!feedbackForm.valid">Submit</button>
+</form>
